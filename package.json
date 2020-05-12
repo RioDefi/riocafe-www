@@ -1,0 +1,21 @@
+{
+  "name": "riocafe-ant",
+  "version": "1.0.0",
+  "description": "My superior Nuxt.js project",
+  "author": "rio",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "ant-design-vue": "^1.1.10",
+    "less": "^3.11.1",
+    "less-loader": "^6.1.0",
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {}
+}
