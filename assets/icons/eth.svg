@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="34px" viewBox="0 0 21 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.2 (81672) - https://sketch.com -->
+    <title>eth</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="eth" fill-rule="nonzero">
+            <polygon id="路径" fill="#343434" points="10.6551 0.258301 10.4293 1.02586 10.4293 23.2986 10.6551 23.524 20.9939 17.4128"></polygon>
+            <polygon id="路径" fill="#8C8C8C" points="10.6552 0.258301 0.316406 17.4128 10.6552 23.5241 10.6552 12.7136"></polygon>
+            <polygon id="路径" fill="#3C3C3B" points="10.6551 25.4812 10.5278 25.6363 10.5278 33.5703 10.6551 33.942 21 19.373"></polygon>
+            <polygon id="路径" fill="#8C8C8C" points="10.6552 33.9421 10.6552 25.4812 0.316406 19.373"></polygon>
+            <polygon id="路径" fill="#141414" points="10.6551 23.5242 20.9937 17.4131 10.6551 12.7139"></polygon>
+            <polygon id="路径" fill="#393939" points="0.316406 17.4126 10.655 23.5238 10.655 12.7134"></polygon>
+        </g>
+    </g>
+</svg>
