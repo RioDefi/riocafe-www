@@ -1,7 +1,7 @@
 <template>
   <div class="about-us-section">
     <div class="container">
-      <a-row :gutter="120" style="margin-bottom: 140px;">
+      <a-row :gutter="120" style="margin-bottom: 140px;" id="about-us">
         <a-col :md="14">
           <div class="section-title">About Us</div>
           <div class="section-desc">
@@ -14,7 +14,7 @@
           <img src="~/assets/about-us/handsup.png" class="handsup" />
         </a-col>
       </a-row>
-      <a-row :gutter="120">
+      <a-row :gutter="120" id="how-it-works">
         <a-col :md="14">
           <a-row :gutter="64" class="features-wrap">
             <a-col :md="12">

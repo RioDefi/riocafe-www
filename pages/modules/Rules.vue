@@ -1,5 +1,5 @@
 <template>
-  <div class="rules-section">
+  <div class="rules-section" id="rules">
     <div class="container">
       <div class="section-title">Rules</div>
       <div

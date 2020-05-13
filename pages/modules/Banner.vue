@@ -1,31 +1,31 @@
 <template>
-      <div class="banner-wrapper">
+  <div class="banner-wrapper">
     <div class="container">
       <header class="page-header">
-        <a-row class="header-container">
-          <a-col :span="5">
+        <div class="header-container">
+          <!-- <a-col :span="5"> -->
             <img src="~/assets/logo.svg" class="logo" />
-          </a-col>
-          <a-col class="header-right">
+          <!-- </a-col> -->
+          <!-- <a-col class="header-right"> -->
             <ul class="header-nav">
               <li>
-                <a>About Us</a>
+                <a href="#" v-scroll-to="'#upcoming-events'">Upcoming Events</a>
               </li>
               <li>
-                <a>How it Works</a>
+                <a href="#" v-scroll-to="'#how-to-host'">How to Host</a>
               </li>
               <li>
-                <a>How to Host</a>
+                <a href="#" v-scroll-to="'#about-us'">About Us</a>
               </li>
               <li>
-                <a>Upcoming Events</a>
+                <a href="#" v-scroll-to="'#how-it-works'">How it Works</a>
               </li>
               <li>
-                <a>Rules</a>
+                <a href="#" v-scroll-to="'#rules'">Rules</a>
               </li>
             </ul>
-          </a-col>
-        </a-row>
+          <!-- </a-col> -->
+        </div>
       </header>
       <div class="banner">
         <a-row :gutter="56">
@@ -41,7 +41,7 @@
             </div>
           </a-col>
           <a-col :md="10">
-            <img class="banner-img" src="~/assets/banner-img.svg" />
+            <img class="banner-img" src="~/assets/banner-img.png" />
           </a-col>
         </a-row>
       </div>
@@ -57,7 +57,7 @@
     color: #131313;
     font-size: 42px;
     font-weight: bold;
-    line-height: 28px;
+    line-height: 56px;
     margin-top: 142px;
     margin-bottom: 32px;
   }
@@ -83,26 +83,29 @@
 }
 
 .page-header {
-  padding: 4px 0;
+  padding: 12px 0;
   .header-container {
-    // display: flex;
-    // align-items: center;
-    // justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     .logo {
-      width: 100%;
+      width: 240px;
     }
     .header-right {
       text-align: right;
     }
     .header-nav {
       // to adapt logo top blank
-      margin-top: 12px;
+      // margin-top: 16px;
       li {
         display: inline-block;
         margin-left: 69px;
         font-size: 16px;
         &:first-child {
           margin-left: 0;
+        }
+        a{
+          color: #2d2d2d;
         }
       }
     }

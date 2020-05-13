@@ -1,12 +1,12 @@
 <template>
-  <div class="why-host-section">
+  <div class="why-host-section" id="how-to-host">
     <div class="container">
       <div class="section-title">Why Host with Blockchain Café</div>
       <div
         class="section-desc"
       >Do you already have a community on another messaging platform that you would like to engage with further past just text? Blockchain Café is the perfect place to bring your current following, as well as grow it, by hosting conference calls, platform demos, market thoughts, etc. through Blockchain Café. Use Blockchain Café to host up to 1,000 participants for as long as you would like. Blockchain Café will not only NOT CHARGE YOU for using our platform, but we will also help to promote your event and discussion with our community and through paid advertisement. Simply sign up below via the “Apply Here” button and secure a timeslot for your very own conference room.</div>
       <a-row :gutter="64">
-        <a-col :md="6">
+        <a-col :span="24" :md="12" :lg="6">
           <div class="feature-item free-bg">
             <div class="icon">
               <img src="~/assets/icons/free.svg" />
@@ -14,7 +14,7 @@
             <div class="text">Free of Charge</div>
           </div>
         </a-col>
-        <a-col :md="6">
+        <a-col :span="24" :md="12" :lg="6">
           <div class="feature-item handsup-bg">
             <div class="icon">
               <img src="~/assets/icons/handsup.svg" />
@@ -22,7 +22,7 @@
             <div class="text">Host up to 1,000 Participants</div>
           </div>
         </a-col>
-        <a-col :md="6">
+        <a-col :span="24" :md="12" :lg="6">
           <div class="feature-item global-bg">
             <div class="icon">
               <img src="~/assets/icons/global.svg" />
@@ -30,7 +30,7 @@
             <div class="text">Grow Your Network</div>
           </div>
         </a-col>
-        <a-col :md="6">
+        <a-col :span="24" :md="12" :lg="6">
           <div class="feature-item collaborate-bg">
             <div class="icon">
               <img src="~/assets/icons/collaborate.svg" />
@@ -89,6 +89,9 @@
   .collaborate-bg {
     background: #fff url("../../assets/why-host/collaborate-bg.svg") no-repeat
       center 40px;
+  }
+  .feature-item{
+    margin-bottom: 80px;
   }
 
   .more-info {

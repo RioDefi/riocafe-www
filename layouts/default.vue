@@ -65,8 +65,15 @@ body {
 .ant-btn {
   color: #fff;
   background: #4d88f7;
-  box-shadow: 0px 3.63104px 12.7086px rgba(0, 0, 0, 0.13);
+  box-shadow: 0px 3.63px 12.7px rgba(0, 0, 0, 0.13);
   border-radius: 2.72328px;
+  transition: all 0.3s;
+  border: none;
+  &:hover {
+    color: #fff;
+    background: #447be1;
+    border: none;
+  }
 }
 
 .feature-item {
@@ -138,6 +145,12 @@ dl {
 @media (min-width: 1600px) {
   .container {
     max-width: 1380px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  img {
+    max-width: 100% !important;
   }
 }
 </style>

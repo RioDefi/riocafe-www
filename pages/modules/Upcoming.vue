@@ -1,9 +1,9 @@
 <template>
-  <div class="upcoming-section">
+  <div class="upcoming-section" id="upcoming-events">
     <div class="container">
       <div class="section-title">Upcoming Event & Forums</div>
       <a-row :gutter="90">
-        <a-col :md="12">
+        <a-col :span="24" :lg="12">
           <div class="upcoming-item">
             <div class="avatar">
               <img src="~/assets/upcoming/1.svg" />
@@ -19,7 +19,7 @@
             </div>
           </div>
         </a-col>
-        <a-col :md="12">
+        <a-col :span="24" :lg="12">
           <div class="upcoming-item">
             <div class="avatar">
               <img src="~/assets/upcoming/2.svg" />
@@ -35,7 +35,7 @@
             </div>
           </div>
         </a-col>
-        <a-col :md="12">
+        <a-col :span="24" :lg="12">
           <div class="upcoming-item">
             <div class="avatar">
               <img src="~/assets/upcoming/3.svg" />
@@ -51,7 +51,7 @@
             </div>
           </div>
         </a-col>
-        <a-col :md="12">
+        <a-col :span="24" :lg="12">
           <div class="upcoming-item">
             <div class="avatar">
               <img src="~/assets/upcoming/4.svg" />
@@ -96,7 +96,7 @@
     margin-bottom: 82px;
     box-shadow: 0px 3.73665px 15.8808px rgba(0, 0, 0, 0.17);
     .avatar {
-      flex: 1;
+      width: 50%;
       img {
         height: 100%;
       }
@@ -104,7 +104,7 @@
     .content {
       padding: 20px 24px 20px;
       background: #fff;
-      flex: 2;
+      width: 50%;
       position: relative;
       overflow: hidden;
       .detail {
@@ -140,6 +140,14 @@
           margin-right: 24px;
         }
       }
+    }
+  }
+  @media screen and (max-width: 992px){
+    .section-title{
+      margin-bottom: 44px;
+    }
+    .upcoming-item{
+      margin-bottom: 32px;
     }
   }
 }
