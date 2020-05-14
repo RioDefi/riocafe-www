@@ -25,8 +25,8 @@
 
 <style lang="less">
 .rules-section {
-    padding: 140px 0;
-    background: #f5f5f7;
+  padding: 140px 0;
+  background: #f5f5f7;
   .section-title {
     text-align: center;
     margin-bottom: 45px;
@@ -35,10 +35,9 @@
     text-align: center;
     width: 80%;
     margin: 0 auto 64px;
-
   }
   ul {
-      margin-top: 32px;
+    margin-top: 32px;
     li {
       font-size: 17px;
       line-height: 36px;
@@ -49,6 +48,12 @@
     box-shadow: 8px 4px 30px rgba(0, 0, 0, 0.09);
     width: 540px;
     border-radius: 11px;
+  }
+  @media screen and (max-width: 992px) {
+    padding: 64px 0;
+    .section-desc{
+      width: 100%;
+    }
   }
 }
 </style>

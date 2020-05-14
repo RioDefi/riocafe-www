@@ -3,44 +3,70 @@
     <div class="container">
       <header class="page-header">
         <div class="header-container">
-          <!-- <a-col :span="5"> -->
-            <img src="~/assets/logo.svg" class="logo" />
-          <!-- </a-col> -->
-          <!-- <a-col class="header-right"> -->
-            <ul class="header-nav">
-              <li>
-                <a href="#" v-scroll-to="'#upcoming-events'">Upcoming Events</a>
-              </li>
-              <li>
-                <a href="#" v-scroll-to="'#how-to-host'">How to Host</a>
-              </li>
-              <li>
-                <a href="#" v-scroll-to="'#about-us'">About Us</a>
-              </li>
-              <li>
-                <a href="#" v-scroll-to="'#how-it-works'">How it Works</a>
-              </li>
-              <li>
-                <a href="#" v-scroll-to="'#rules'">Rules</a>
-              </li>
-            </ul>
-          <!-- </a-col> -->
+          <img src="~/assets/logo.svg" class="logo" />
+          <ul class="header-nav">
+            <li>
+              <a href="#" v-scroll-to="{el:'#upcoming-events', offset: 100}">Upcoming Events</a>
+            </li>
+            <li>
+              <a href="#" v-scroll-to="'#how-to-host'">How to Host</a>
+            </li>
+            <li>
+              <a href="#" v-scroll-to="{el:'#about-us', offset: -100}">About Us</a>
+            </li>
+            <li>
+              <a href="#" v-scroll-to="{el:'#how-it-works',offset: -100}">How it Works</a>
+            </li>
+            <li>
+              <a href="#" v-scroll-to="'#rules'">Rules</a>
+            </li>
+          </ul>
+          <div class="header-menu">
+            <a-dropdown :trigger="['click']">
+              <a class="ant-dropdown-link" @click="e => e.preventDefault()">
+                <a-icon type="menu" class="menu-icon" />
+              </a>
+              <a-menu slot="overlay">
+                <a-menu-item>
+                  <a href="#" v-scroll-to="{el:'#upcoming-events'}">Upcoming Events</a>
+                </a-menu-item>
+                <a-menu-item>
+                  <a href="#" v-scroll-to="'#how-to-host'">How to Host</a>
+                </a-menu-item>
+                <a-menu-item>
+                  <a href="#" v-scroll-to="{el:'#about-us', offset: -20}">About Us</a>
+                </a-menu-item>
+                <a-menu-item>
+                  <a href="#" v-scroll-to="{el:'#how-it-works'}">How it Works</a>
+                </a-menu-item>
+                <a-menu-item>
+                  <a href="#" v-scroll-to="'#rules'">Rules</a>
+                </a-menu-item>
+              </a-menu>
+            </a-dropdown>
+          </div>
         </div>
       </header>
       <div class="banner">
-        <a-row :gutter="56">
-          <a-col :md="14">
+        <a-row :gutter="{lg:56}">
+          <a-col :span="24" :lg="14">
             <div class="banner-title">Taking your physical event virtual?</div>
             <div
               class="banner-text"
             >Learning, growing and sharing must continue during COVID-19 when you cannot meet in person. Join the Blockchain Café where people in the blockchain & crypto space can share and collaborate with one another, and people wanting to learn more can join in on the global digital revolution.</div>
             <div class="banner-btns">
-              <a-button>Access Blockchain Cafe</a-button>
-              <a-button>Join on Telegram</a-button>
-              <a-button>Sign-up to Host Your Own Meeting</a-button>
+              <a-button>
+                <img src="~/assets/icons/video.svg" /> Access Blockchain Cafe
+              </a-button>
+              <a-button>
+                <img src="~/assets/icons/telegram.svg" />Join on Telegram
+              </a-button>
+              <a-button>
+                <img src="~/assets/icons/user.svg" />Sign-up to Host Your Own Meeting
+              </a-button>
             </div>
           </a-col>
-          <a-col :md="10">
+          <a-col :span="24" :lg="10">
             <img class="banner-img" src="~/assets/banner-img.png" />
           </a-col>
         </a-row>
@@ -76,8 +102,25 @@
     .ant-btn {
       height: 50px;
       line-height: 50px;
-      padding: 0 20px;
+      margin-bottom: 16px;
       margin-right: 24px;
+      img {
+        margin-right: 12px;
+      }
+    }
+  }
+  @media screen and (max-width: 992px) {
+    .banner-title {
+      margin: 80px auto 24px;
+      font-size: 32px;
+    }
+    .banner-text {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 32px;
+    }
+    .banner-img {
+      display: none;
     }
   }
 }
@@ -104,9 +147,36 @@
         &:first-child {
           margin-left: 0;
         }
-        a{
+        a {
           color: #2d2d2d;
         }
+      }
+    }
+    .header-menu {
+      display: none;
+      .menu-icon {
+        font-size: 32px;
+        color: #447be1;
+      }
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    .header-container {
+      .header-nav {
+        li {
+          margin-left: 32px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 992px) {
+    padding: 24px 0;
+    .header-container {
+      .header-nav {
+        display: none;
+      }
+      .header-menu {
+        display: block;
       }
     }
   }

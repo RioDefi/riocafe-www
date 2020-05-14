@@ -1,7 +1,7 @@
 <template>
   <div class="about-us-section">
     <div class="container">
-      <a-row :gutter="120" style="margin-bottom: 140px;" id="about-us">
+      <a-row :gutter="{xs: 0, md:120}" id="about-us">
         <a-col :md="14">
           <div class="section-title">About Us</div>
           <div class="section-desc">
@@ -14,10 +14,10 @@
           <img src="~/assets/about-us/handsup.png" class="handsup" />
         </a-col>
       </a-row>
-      <a-row :gutter="120" id="how-it-works">
+      <a-row  :gutter="{md:120}" id="how-it-works">
         <a-col :md="14">
-          <a-row :gutter="64" class="features-wrap">
-            <a-col :md="12">
+          <a-row :gutter="{xs: 16, md:64}" class="features-wrap">
+            <a-col :xs="12" :md="12">
               <div class="feature-item house-bg">
                 <div class="icon">
                   <img src="~/assets/icons/house.svg" />
@@ -25,7 +25,7 @@
                 <div class="text">Fireside Chats</div>
               </div>
             </a-col>
-            <a-col :md="12">
+            <a-col :xs="12" :md="12">
               <div class="feature-item chat-bg">
                 <div class="icon">
                   <img src="~/assets/icons/chat.svg" />
@@ -33,7 +33,7 @@
                 <div class="text">Panel Discussions</div>
               </div>
             </a-col>
-            <a-col :md="12">
+            <a-col :xs="12" :md="12">
               <div class="feature-item play-bg">
                 <div class="icon">
                   <img src="~/assets/icons/play.svg" />
@@ -41,7 +41,7 @@
                 <div class="text">Presentations</div>
               </div>
             </a-col>
-            <a-col :md="12">
+            <a-col :xs="12" :md="12">
               <div class="feature-item voice-bg">
                 <div class="icon">
                   <img src="~/assets/icons/voice.svg" />
@@ -67,6 +67,9 @@
 <style lang="less">
 .about-us-section {
   padding: 200px 0;
+  #about-us{
+    margin-bottom: 140px;
+  }
   .section-title {
     margin-bottom: 50px;
   }
@@ -96,6 +99,19 @@
   .voice-bg {
     background: #fff url("../../assets/about-us/chat-bg.svg") no-repeat center
       70%;
+  }
+  @media screen and (max-width: 992px){
+    padding: 120px 0;
+    #about-us{
+      margin-bottom: 32px;
+    }
+    .feature-item{
+      margin-bottom: 64px;
+      padding-top: 64px;
+    }
+    .section-desc{
+      margin-bottom: 32px;
+    }
   }
 }
 </style>

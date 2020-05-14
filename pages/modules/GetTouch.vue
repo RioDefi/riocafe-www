@@ -1,8 +1,8 @@
 <template>
   <div class="get-touch-section">
     <div class="container">
-      <a-row :gutter="90">
-        <a-col :md="12">
+      <a-row :gutter="{xs: 0, lg: 90}">
+        <a-col :xs="24" :lg="12">
           <div class="section-title">Get in touch with us</div>
           <ul>
             <li>Do you have a new project that you want to share your idea with others?</li>
@@ -13,9 +13,9 @@
             class="section-desc"
           >Please fill-in the brief questionnaire to organize a group conferencing to discuss anything you would like. Blockchain Café will help you to promote and push out the conversation!</div>
         </a-col>
-        <a-col :md="12">
+        <a-col :xs="24" :lg="12">
           <a-form-model :model="form" class="touch-form">
-            <a-row :gutter="32">
+            <a-row :gutter="{md:32}">
               <a-col :md="12">
                 <a-form-model-item>
                   <a-input v-model="form.firstName" placeholder="First Name" />
@@ -70,7 +70,7 @@
               </a-col>
               <a-col :span="24">
                 <a-textarea
-                  :autosize="{ minRows: 2, maxRows: 6 }"
+                  :autoSize="{ minRows: 2, maxRows: 6 }"
                   placeholder="Please Outline the Topic you would like to Present"
                 />
               </a-col>
@@ -184,6 +184,12 @@ export default {
       height: 60px;
       line-height: 60px;
       width: 225px;
+    }
+  }
+  @media screen and (max-width: 992px) {
+    padding: 64px 0;
+    .section-desc{
+      margin-bottom: 32px;
     }
   }
 }

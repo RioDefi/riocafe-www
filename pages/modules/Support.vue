@@ -6,9 +6,11 @@
         <div
           class="section-desc"
         >Blockchain Café is a not-for-profit platform created by a group of entrepreneurs with the hope of bringing a global community and forum together to learn, share, and discuss. We welcome community members who like Blockchain Café to donate to the platform to help expand our community and spread blockchain, crypto, FinTech and DeFi knowledge!</div>
-        <a-button class="btn-donate">DONATE</a-button>
+        <a-button class="btn-donate">
+          <img src="~/assets/icons/donate.svg" /> DONATE
+        </a-button>
         <div class="address-box">
-          <a-row :gutter="64">
+          <a-row :gutter="{md:64}">
             <a-col :md="8">
               <div class="item">
                 <div class="coin">
@@ -71,6 +73,9 @@
     margin-bottom: 64px;
     width: 200px;
     font-size: 19px;
+    img {
+      margin-right: 12px;
+    }
   }
   .address-box {
     background: #ffffff;
@@ -99,6 +104,9 @@
         word-break: break-word;
       }
     }
+  }
+  @media screen and (max-width: 992px) {
+    padding: 64px 0;
   }
 }
 </style>

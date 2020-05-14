@@ -102,6 +102,7 @@ ol,
 ul,
 dl {
   margin: 0;
+  max-width: 100%;
 }
 
 .container {
@@ -114,7 +115,7 @@ dl {
 
 @media (min-width: 576px) {
   .container {
-    max-width: 540px;
+    max-width: 520px;
   }
 }
 
@@ -148,9 +149,39 @@ dl {
   }
 }
 
+@media screen and (max-width: 1200px){
+  .feature-item{
+    .text{
+      font-size: 15px;
+      line-height: 24px;
+    }
+  }
+}
+
 @media screen and (max-width: 992px) {
   img {
     max-width: 100% !important;
+  }
+  .section-title{
+    font-size: 28px;
+    margin-bottom: 32px !important;
+  }
+  .section-desc{
+    font-size: 14px !important;
+    line-height: 24px !important;
+  }
+  
+  .feature-item{
+    height: 120px;
+    .icon{
+      width: 60px;
+      height: 60px;
+      top: -30px;
+    }
+    .text{
+      font-size: 14px;
+      line-height: 24px;
+    }
   }
 }
 </style>
