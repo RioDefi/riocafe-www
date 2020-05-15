@@ -51,7 +51,10 @@
 
 <style lang="less">
 .support-section {
-  padding: 140px 0;
+  margin-top: -500px;
+  padding: 600px 0 140px;
+  background: #fff url("../../assets/waves/4.png") no-repeat center top;
+  background-size: 100%;
   text-align: center;
   .content-wrapper {
     width: 80%;
@@ -106,7 +109,8 @@
     }
   }
   @media screen and (max-width: 992px) {
-    padding: 64px 0;
+    margin-top: -250px;
+    padding: 300px 0 90px;
   }
 }
 </style>

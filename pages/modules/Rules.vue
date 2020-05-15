@@ -5,9 +5,9 @@
       <div
         class="section-desc"
       >Blockchain Café is created to be an open and welcoming space for people to share ideas and updates as well as learn from others. We do not allow nor condone any sort of inappropriate behavior or speech. In order to help prevent this, Blockchain Café and its participants must follow these rules:</div>
-      <a-row>
+      <a-row :gutter="{md: 24}">
         <a-col :md="12">
-          <img src="~/assets/rules/chat.png" class="chat" />
+          <img src="~/assets/rules/chat.png" class="chat" style="max-width: 100%"/>
         </a-col>
         <a-col :md="12">
           <ul>
@@ -25,8 +25,10 @@
 
 <style lang="less">
 .rules-section {
-  padding: 140px 0;
-  background: #f5f5f7;
+  padding: 510px 0 140px;
+  margin-top: -720px;
+  background: #edeff2 url("../../assets/waves/3.png") no-repeat center top;
+  background-size: 100%;
   .section-title {
     text-align: center;
     margin-bottom: 45px;
@@ -50,8 +52,9 @@
     border-radius: 11px;
   }
   @media screen and (max-width: 992px) {
-    padding: 64px 0;
-    .section-desc{
+    padding: 250px 0 64px;
+    margin-top: -360px;
+    .section-desc {
       width: 100%;
     }
   }

@@ -107,7 +107,7 @@ export default {
 <style lang="less">
 .get-touch-section {
   padding: 140px 0;
-  background: #f5f5f7;
+  background: #EDEFF2;
   .section-title {
     margin-bottom: 48px;
   }

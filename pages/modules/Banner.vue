@@ -78,7 +78,8 @@
 
 <style lang="less">
 .banner-wrapper {
-  background: url(../../assets/banner.svg) no-repeat;
+  background: url(../../assets/banner.png) no-repeat;
+  background-size: auto 100%;
   .banner-title {
     color: #131313;
     font-size: 42px;
