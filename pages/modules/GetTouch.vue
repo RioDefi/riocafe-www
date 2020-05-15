@@ -62,7 +62,10 @@
               </a-col>-->
               <a-col :span="24" class="upload-wrapper">
                 <a-upload>
-                  <div class="upload-box">Please Upload a Headshot or Event Banner</div>
+                  <div class="upload-box">
+                    <span>Please Upload a Headshot or Event Banner</span>
+                    <img src="~/assets/icons/upload.svg" />
+                  </div>
                 </a-upload>
                 <div
                   class="hint"
@@ -158,14 +161,18 @@ export default {
       margin-bottom: 24px;
     }
     .upload-box {
+      cursor: pointer;
       background: #f7f7f7;
       border: 0.500754px solid #e4e4e4;
       border-radius: 5.00754px;
       height: 50px;
       color: #999ea4;
       padding-left: 10px;
+      padding-right: 20px;
       width: 100%;
       line-height: 50px;
+      display: flex;
+      justify-content: space-between;
     }
     .hint {
       color: #999ea4;
@@ -188,7 +195,7 @@ export default {
   }
   @media screen and (max-width: 992px) {
     padding: 64px 0;
-    .section-desc{
+    .section-desc {
       margin-bottom: 32px;
     }
   }

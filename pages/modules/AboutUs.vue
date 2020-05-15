@@ -66,7 +66,7 @@
 
 <style lang="less">
 .about-us-section {
-  padding: 200px 0;
+  padding: 360px 0;
   #about-us{
     margin-bottom: 140px;
   }
