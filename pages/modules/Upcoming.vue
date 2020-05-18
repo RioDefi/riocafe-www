@@ -2,8 +2,8 @@
   <div class="upcoming-section" id="upcoming-events">
     <div class="container">
       <div class="section-title">Upcoming Event & Forums</div>
-      <a-row :gutter="{xs: 0, lg:90}">
-        <a-col :xs="24" :lg="12">
+      <a-row :gutter="{xs: 0, lg:40, xl: 90}">
+        <!-- <a-col :xs="24" :lg="12" xl="12">
           <div class="upcoming-item">
             <div class="avatar">
               <img src="~/assets/upcoming/1.svg" />
@@ -19,7 +19,7 @@
             </div>
           </div>
         </a-col>
-        <a-col :xs="24" :lg="12">
+        <a-col :xs="24" :lg="12" xl="12">
           <div class="upcoming-item">
             <div class="avatar">
               <img src="~/assets/upcoming/2.svg" />
@@ -35,7 +35,7 @@
             </div>
           </div>
         </a-col>
-        <a-col :xs="24" :lg="12">
+        <a-col :xs="24" :lg="12" xl="12">
           <div class="upcoming-item">
             <div class="avatar">
               <img src="~/assets/upcoming/3.svg" />
@@ -50,20 +50,64 @@
               <div class="detail">Details</div>
             </div>
           </div>
-        </a-col>
-        <a-col :xs="24" :lg="12">
+        </a-col> -->
+        <a-col :xs="24" :lg="12" xl="12">
           <div class="upcoming-item">
-            <div class="avatar">
-              <img src="~/assets/upcoming/4.svg" />
+            <div class="avatar avatar-empty">
+              <img src="~/assets/icons/empty.svg" />
             </div>
             <div class="content">
-              <div class="title">Virtual Dreamin in Los Angeles 2020</div>
-              <div class="date">San, May 7:00 AM</div>
-              <div class="icons">
-                <img src="~/assets/icons/calendar.svg" class="upcoming-icon" />
-                <img src="~/assets/icons/share.svg" class="upcoming-icon" />
-              </div>
-              <div class="detail">Details</div>
+              <div class="title">Event Slot Available</div>
+              <a href="#" v-scroll-to="{el:'#get-touch',offset: 50}">
+                <a-button class="organize-btn">
+                  <img src="~/assets/icons/plus.svg" /> Organize Your Own Event
+                </a-button>
+              </a>
+            </div>
+          </div>
+        </a-col>
+            <a-col :xs="24" :lg="12" xl="12">
+          <div class="upcoming-item">
+            <div class="avatar avatar-empty">
+              <img src="~/assets/icons/empty.svg" />
+            </div>
+            <div class="content">
+              <div class="title">Event Slot Available</div>
+              <a href="#" v-scroll-to="{el:'#get-touch',offset: 50}">
+                <a-button class="organize-btn">
+                  <img src="~/assets/icons/plus.svg" /> Organize Your Own Event
+                </a-button>
+              </a>
+            </div>
+          </div>
+        </a-col>
+            <a-col :xs="24" :lg="12" xl="12">
+          <div class="upcoming-item">
+            <div class="avatar avatar-empty">
+              <img src="~/assets/icons/empty.svg" />
+            </div>
+            <div class="content">
+              <div class="title">Event Slot Available</div>
+              <a href="#" v-scroll-to="{el:'#get-touch',offset: 50}">
+                <a-button class="organize-btn">
+                  <img src="~/assets/icons/plus.svg" /> Organize Your Own Event
+                </a-button>
+              </a>
+            </div>
+          </div>
+        </a-col>
+            <a-col :xs="24" :lg="12" xl="12">
+          <div class="upcoming-item">
+            <div class="avatar avatar-empty">
+              <img src="~/assets/icons/empty.svg" />
+            </div>
+            <div class="content">
+              <div class="title">Event Slot Available</div>
+              <a href="#" v-scroll-to="{el:'#get-touch',offset: 50}">
+                <a-button class="organize-btn">
+                  <img src="~/assets/icons/plus.svg" /> Organize Your Own Event
+                </a-button>
+              </a>
             </div>
           </div>
         </a-col>
@@ -94,10 +138,26 @@
     display: flex;
     margin-bottom: 82px;
     box-shadow: 0px 3.73665px 15.8808px rgba(0, 0, 0, 0.17);
+    .avatar-empty{
+      padding: 8px;
+      img{
+        width: 100%;
+      }
+    }
     .avatar {
+      background: #fff;
       width: 45%;
       img {
         height: 100%;
+      }
+    }
+    .organize-btn{
+      border-radius: 11px;
+      height: 50px;
+      line-height: 50px;
+      margin-top: 54px;
+      img{
+        margin-right: 16px;
       }
     }
     .content {
@@ -149,13 +209,13 @@
     .upcoming-item {
       margin-bottom: 32px;
       display: block;
-      .avatar{
+      .avatar {
         width: 100%;
-        img{
+        img {
           width: 100%;
         }
       }
-      .content{
+      .content {
         width: 100%;
       }
     }

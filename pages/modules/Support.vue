@@ -25,7 +25,7 @@
               <div class="item">
                 <div class="coin">
                   <img src="~/assets/icons/usdt.svg" class="icon" />
-                  BTC
+                  USDT
                 </div>
                 <img src="~/assets/address/usdt.svg" class="qr-code" />
                 <div class="text">RJ7mdg5rosbQyUHENYJosheisheUisjsheourodhieonvHgs</div>
@@ -35,7 +35,7 @@
               <div class="item">
                 <div class="coin">
                   <img src="~/assets/icons/eth.svg" class="icon" />
-                  BTC
+                  ETH
                 </div>
                 <img src="~/assets/address/eth.svg" class="qr-code" />
                 <div class="text">RJ7mdg5rosbQyUHENYJosheisheUisjsheourodhieonvHgs</div>
@@ -53,7 +53,7 @@
 .support-section {
   margin-top: -500px;
   padding: 600px 0 140px;
-  background: #fff url("../../assets/waves/4.png") no-repeat center top;
+  background: #fff url("../../assets/waves/4.jpg") no-repeat center top;
   background-size: 100%;
   text-align: center;
   .content-wrapper {

@@ -27,7 +27,7 @@
 .rules-section {
   padding: 510px 0 140px;
   margin-top: -720px;
-  background: #edeff2 url("../../assets/waves/3.png") no-repeat center top;
+  background: #f6f6f6 url("../../assets/waves/3.jpg") no-repeat center top;
   background-size: 100%;
   .section-title {
     text-align: center;

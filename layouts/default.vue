@@ -69,7 +69,8 @@ body {
   border-radius: 2.72328px;
   transition: all 0.3s;
   border: none;
-  &:hover {
+  
+  &:hover, &:active, &:focus {
     color: #fff;
     background: #447be1;
     border: none;

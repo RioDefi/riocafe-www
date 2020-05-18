@@ -1,5 +1,5 @@
 <template>
-  <div class="get-touch-section">
+  <div class="get-touch-section" id="get-touch">
     <div class="container">
       <a-row :gutter="{xs: 0, lg: 90}">
         <a-col :xs="24" :lg="12">
@@ -107,7 +107,7 @@ export default {
 <style lang="less">
 .get-touch-section {
   padding: 140px 0;
-  background: #EDEFF2;
+  background: #f6f6f6;
   .section-title {
     margin-bottom: 48px;
   }
