@@ -112,7 +112,7 @@
           </div>
         </a-col>
       </a-row>
-      <a-button class="show-more-btn">Show More</a-button>
+      <!-- <a-button class="show-more-btn">Show More</a-button> -->
     </div>
   </div>
 </template>
