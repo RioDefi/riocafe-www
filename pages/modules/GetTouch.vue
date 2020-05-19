@@ -69,7 +69,7 @@
                     :multiple="false"
                   >
                     <div class="upload-box">
-                      <span>Please Upload a Headshot or Event Banner</span>
+                      <span>Upload a Headshot or Event Banner</span>
                       <img src="~/assets/icons/upload.svg" />
                     </div>
                   </a-upload>
@@ -132,16 +132,32 @@ export default {
       domain: "http://riocafe-admin.riochain.io",
       rules: {
         firstName: [
-          { required: true, message: "First name is required", trigger: "change" }
+          {
+            required: true,
+            message: "First name is required",
+            trigger: "change"
+          }
         ],
         lastName: [
-          { required: true, message: "Last name is required", trigger: "change" }
+          {
+            required: true,
+            message: "Last name is required",
+            trigger: "change"
+          }
         ],
         nationality: [
-          { required: true, message: "Nationality is required", trigger: "change" }
+          {
+            required: true,
+            message: "Nationality is required",
+            trigger: "change"
+          }
         ],
         favorite: [
-          { required: true, message: "Favorite currency is required", trigger: "change" }
+          {
+            required: true,
+            message: "Favorite currency is required",
+            trigger: "change"
+          }
         ],
         language: [
           { required: true, message: "Language is required", trigger: "change" }
@@ -233,6 +249,7 @@ export default {
     }
     .upload-box {
       cursor: pointer;
+      overflow: hidden;
       background: #f7f7f7;
       border: 0.500754px solid #e4e4e4;
       border-radius: 5.00754px;
@@ -244,6 +261,11 @@ export default {
       line-height: 50px;
       display: flex;
       justify-content: space-between;
+      span {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
     }
     .hint {
       color: #999ea4;
@@ -268,6 +290,9 @@ export default {
     padding: 64px 0;
     .section-desc {
       margin-bottom: 32px;
+    }
+    .touch-form {
+      padding: 16px 16px;
     }
   }
 }
