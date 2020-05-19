@@ -14,30 +14,30 @@
           >Please fill-in the brief questionnaire to organize a group conferencing to discuss anything you would like. Blockchain Café will help you to promote and push out the conversation!</div>
         </a-col>
         <a-col :xs="24" :lg="12">
-          <a-form-model :model="form" class="touch-form">
+          <a-form-model :model="form" :rules="rules" class="touch-form" ref="ruleForm">
             <a-row :gutter="{md:32}">
               <a-col :md="12">
-                <a-form-model-item>
+                <a-form-model-item prop="firstName">
                   <a-input v-model="form.firstName" placeholder="First Name" />
                 </a-form-model-item>
               </a-col>
               <a-col :md="12">
-                <a-form-model-item>
+                <a-form-model-item prop="email">
                   <a-input v-model="form.email" placeholder="Email Address" />
                 </a-form-model-item>
               </a-col>
               <a-col :md="12">
-                <a-form-model-item>
+                <a-form-model-item prop="lastName">
                   <a-input v-model="form.lastName" placeholder="Last Name" />
                 </a-form-model-item>
               </a-col>
               <a-col :md="12">
-                <a-form-model-item>
+                <a-form-model-item prop="nationality">
                   <a-input v-model="form.nationality" placeholder="Nationality" />
                 </a-form-model-item>
               </a-col>
               <a-col :md="12">
-                <a-form-model-item>
+                <a-form-model-item prop="language">
                   <a-select v-model="form.language" placeholder="Language">
                     <a-select-option value="en">English</a-select-option>
                     <a-select-option value="zh">简体中文</a-select-option>
@@ -48,9 +48,9 @@
                 </a-form-model-item>
               </a-col>
               <a-col :md="12">
-                <a-form-model-item>
+                <a-form-model-item prop="favorite">
                   <a-input
-                    v-model="form.currency"
+                    v-model="form.favorite"
                     placeholder="What is your favorite cryptocurrency?"
                   />
                 </a-form-model-item>
@@ -61,25 +61,35 @@
                 >Please note we only can host English and Chinese languages currently</div>
               </a-col>-->
               <a-col :span="24" class="upload-wrapper">
-                <a-upload>
-                  <div class="upload-box">
-                    <span>Please Upload a Headshot or Event Banner</span>
-                    <img src="~/assets/icons/upload.svg" />
-                  </div>
-                </a-upload>
-                <div
-                  class="hint"
-                >This will be used on Blockchain Café marketing and promotions for your event</div>
+                <a-form-model-item prop="headshot">
+                  <a-upload
+                    :action="domain + '/upload'"
+                    @change="uploadChange"
+                    name="files"
+                    :multiple="false"
+                  >
+                    <div class="upload-box">
+                      <span>Please Upload a Headshot or Event Banner</span>
+                      <img src="~/assets/icons/upload.svg" />
+                    </div>
+                  </a-upload>
+                  <div
+                    class="hint"
+                  >This will be used on Blockchain Café marketing and promotions for your event</div>
+                </a-form-model-item>
               </a-col>
               <a-col :span="24">
-                <a-textarea
-                  :autoSize="{ minRows: 2, maxRows: 6 }"
-                  placeholder="Please Outline the Topic you would like to Present"
-                />
+                <a-form-model-item prop="topic">
+                  <a-textarea
+                    v-model="form.topic"
+                    :autoSize="{ minRows: 2, maxRows: 6 }"
+                    placeholder="Please Outline the Topic you would like to Present"
+                  />
+                </a-form-model-item>
               </a-col>
             </a-row>
             <div class="send-wrapper">
-              <a-button>SEND</a-button>
+              <a-button @click="submitForm">SEND</a-button>
             </div>
           </a-form-model>
         </a-col>
@@ -90,14 +100,75 @@
 
 <script>
 export default {
+  methods: {
+    submitForm() {
+      console.log(this.form, "fformm");
+
+      this.$refs.ruleForm.validate(valid => {
+        if (valid) {
+          console.log(valid, "valid");
+          this.$axios
+            .post(this.domain + "/events", this.form)
+            .then(res => {
+              this.$message.success("Form submited");
+            })
+            .catch(error => {
+              this.$message.error(error);
+            });
+        } else {
+          this.$message.error("Please enter all fields");
+          return false;
+        }
+      });
+    },
+    uploadChange(info) {
+      if (info.file.status == "done") {
+        this.form.headshot = this.domain + info.file.response[0].url;
+      }
+    }
+  },
   data() {
     return {
+      domain: "http://riocafe-admin.riochain.io",
+      rules: {
+        firstName: [
+          { required: true, message: "First name is required", trigger: "change" }
+        ],
+        lastName: [
+          { required: true, message: "Last name is required", trigger: "change" }
+        ],
+        nationality: [
+          { required: true, message: "Nationality is required", trigger: "change" }
+        ],
+        favorite: [
+          { required: true, message: "Favorite currency is required", trigger: "change" }
+        ],
+        language: [
+          { required: true, message: "Language is required", trigger: "change" }
+        ],
+        email: [
+          {
+            required: true,
+            type: "email",
+            message: "Email is not valid",
+            trigger: "change"
+          }
+        ],
+        headshot: [
+          { required: true, message: "Image is required", trigger: "change" }
+        ],
+        topic: [
+          { required: true, message: "Topic is required", trigger: "change" }
+        ]
+      },
       form: {
         firstName: "",
         lastName: "",
         nationality: "",
-        currency: "",
-        email: ""
+        favorite: "",
+        email: "",
+        headshot: "",
+        topic: ""
       }
     };
   }

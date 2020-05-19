@@ -56,13 +56,21 @@
             >Learning, growing and sharing must continue during COVID-19 when you cannot meet in person. Join the Blockchain Café where people in the blockchain & crypto space can share and collaborate with one another, and people wanting to learn more can join in on the global digital revolution.</div>
             <div class="banner-btns">
               <a-button>
-                <img src="~/assets/icons/video.svg" /> Access Blockchain Cafe
+                <a href="https://us02web.zoom.us/j/9109108888" target="_blank">
+                  <img src="~/assets/icons/video.svg" />
+                  Access Blockchain Cafe
+                </a>
               </a-button>
               <a-button>
-                <img src="~/assets/icons/telegram.svg" />Join on Telegram
+                <a href="https://t.me/BlockchainCafeOfficial" target="_blank">
+                  <img src="~/assets/icons/telegram.svg" />Join on Telegram
+                </a>
               </a-button>
               <a-button>
-                <img src="~/assets/icons/user.svg" />Sign-up to Host Your Own Meeting
+                <a href="#" v-scroll-to="{el:'#get-touch',offset: 50}">
+                  <img src="~/assets/icons/user.svg" />
+                  Sign-up to Host Your Own Meeting
+                </a>
               </a-button>
             </div>
           </a-col>
