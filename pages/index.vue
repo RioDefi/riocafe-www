@@ -28,8 +28,10 @@ export default {
     GetTouch,
     Support,
   },
-  data() {
-    return {};
+  head(){
+    return {
+      title: 'Blockchain Cafe - Host your virtual events for free'
+    }
   }
 };
 </script>

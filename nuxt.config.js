@@ -9,7 +9,6 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'title', name: 'title', content: 'Blockchain Cafe - Host your virtual events for free' },
       { hid: 'description', name: 'description', content: 'Host your virtual events for free or join and listen to people in the blockchain & crypto space  share and collaborate with one another.' }
     ],
     link: [
