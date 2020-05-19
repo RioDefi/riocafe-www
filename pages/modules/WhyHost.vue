@@ -49,9 +49,11 @@
             <li>Does your existing company have new and exciting product roll outs that you want to share?</li>
             <li>Do you know a lot about blockchain and want to share your knowledge with people who want to learn?</li>
           </ul>
-          <a-button class="apply-btn">
-            <img src="~/assets/icons/user.svg" /> Apply Here to Host Your Own Event
-          </a-button>
+          <a href="#" v-scroll-to="{el:'#get-touch',offset: 50}">
+            <a-button class="apply-btn">
+              <img src="~/assets/icons/user.svg" /> Apply Here to Host Your Own Event
+            </a-button>
+          </a>
         </a-col>
         <a-col :lg="10">
           <img src="~/assets/why-host/happy-worker.png" class="happy-worker" />

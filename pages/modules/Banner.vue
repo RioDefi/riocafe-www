@@ -69,7 +69,7 @@
               <a-button>
                 <a href="#" v-scroll-to="{el:'#get-touch',offset: 50}">
                   <img src="~/assets/icons/user.svg" />
-                  Sign-up to Host Your Own Meeting
+                  Host Your Own Meeting
                 </a>
               </a-button>
             </div>
@@ -112,7 +112,7 @@
       height: 50px;
       line-height: 50px;
       margin-bottom: 16px;
-      margin-right: 24px;
+      margin-right: 12px;
       img {
         margin-right: 12px;
       }

@@ -6,7 +6,7 @@
     <AboutUs/>
     <Rules/>
     <GetTouch/>
-    <Support/>
+    <!-- <Support/> -->
   </div>
 </template>
 
