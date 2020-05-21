@@ -15,7 +15,9 @@
                 <img src="~/assets/icons/calendar.svg" class="upcoming-icon" />
                 <img src="~/assets/icons/share.svg" class="upcoming-icon" />
               </div>
-              <div class="detail">Details</div>
+              <div class="detail">
+                <nuxt-link style="color: #fff;" :to="'/events/' + item.id">Details</nuxt-link>
+              </div>
             </div>
           </div>
         </a-col>
@@ -45,9 +47,9 @@
 export default {
   async created() {
     const res = await this.$axios.get(this.domain + "/events", {
-      params:{
+      params: {
         certify: true,
-        _sort: 'time:desc',
+        _sort: "time:desc",
         _limit: 8
       }
     });
@@ -55,7 +57,7 @@ export default {
   },
   data() {
     return {
-      domain: "http://riocafe-admin.riochain.io",
+      domain: "https://riocafe-admin.riochain.io",
       eventsList: []
     };
   }

@@ -129,7 +129,7 @@ export default {
   },
   data() {
     return {
-      domain: "http://riocafe-admin.riochain.io",
+      domain: "https://riocafe-admin.riochain.io",
       rules: {
         firstName: [
           {
